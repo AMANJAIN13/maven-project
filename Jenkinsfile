@@ -30,7 +30,7 @@ pipeline {
     agent any
      
      tools{
-           maven 'Maven'
+           maven 'localMaven'
            //jdk 'java 8'
      }
 
