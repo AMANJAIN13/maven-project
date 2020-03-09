@@ -29,10 +29,10 @@
 pipeline {
     agent any
      
-    /* tools{
-           maven 'maven 3.6.0'
-           jdk 'java 8'
-          }*/
+     tools{
+           maven 'Maven'
+           //jdk 'java 8'
+     }
 
     parameters {
          string(name: 'tomcat_dev', defaultValue: 'localhost:9090', description: 'Staging Server')
