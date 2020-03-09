@@ -31,7 +31,7 @@ pipeline {
      
      tools{
            maven 'localMaven'
-           jdk 'Java-11.0.6'
+           jdk 'localJDK'
      }
 
     parameters {
