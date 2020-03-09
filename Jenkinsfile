@@ -61,7 +61,8 @@ stages{
                 stage ('Deploy to Staging'){
                     steps {
                         // sh "cp -i  **/target/*.war aman@${params.tomcat_dev}:/home/aman/webstaging/webapps"
-                         sh " cp -i  **/target/*.war /home/aman/webstaging/webapps"
+                         //sh " cp -i  **/target/*.war /home/aman/webstaging/webapps"
+                         sh "whoami"
                     }
                 }
                  
