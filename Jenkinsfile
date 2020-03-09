@@ -60,13 +60,14 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "cp -i  **/target/*.war aman@${params.tomcat_dev}:/home/aman/webstaging/webapps"
+                        // sh "cp -i  **/target/*.war aman@${params.tomcat_dev}:/home/aman/webstaging/webapps"
+                         sh "cp -i  **/target/*.war /home/aman/webstaging/webapps"
                     }
                 }
                  
                 stage ("Deploy to Production"){
                     steps {
-                        sh "cp -i **/target/*.war aman@${params.tomcat_prod}:/home/aman/webproduction/apache-tomcat-8.5.51/webapps"
+                        sh "cp -i **/target/*.war /home/aman/webproduction/apache-tomcat-8.5.51/webapps"
                     }
                 }
             }
